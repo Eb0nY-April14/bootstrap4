@@ -11,55 +11,90 @@
 <body>
     <article class="container">
         <!-- Callout -->
-        <section class="callout">
-            <h1>The finest whiskeys delivered to your doorstep.</h1>
-            <!-- "lead" is a bootstrap class that will draw a little bit more attention to our byline & make it match the heading in terms of style -->
-            <p class="lead">Sign up today to start receiving the world's best whiskeys every month. <s>€19.99</s><strong><mark>First one is free!</mark></strong></p>
-            <button class="btn btn-success btn-lg">Sign Up!</button> <!-- The class "btn-lg" is used for making the button bigger -->
-            <!-- "text-muted" is a bootstrap class that will make our text a little bit lighter -->
-            <p class="text-muted"><small>You must be over 18 to sign up toour service. Please drink responsibly.</small></p>
-        </section>
+        <div class="row">
+          <!-- The callout section remains the same cos we want it be be full width across all devices -->
+            <div class="col-12">  <!-- 1st "col-12" class starts here -->
+                <section class="callout">
+                  <h1>The finest whiskeys delivered to your doorstep.</h1>
+                  <!-- "lead" is a bootstrap class that will draw a little bit more attention to our byline & make it match the heading in terms of style -->
+                  <p class="lead">Sign up today to start receiving the world's best whiskeys every month. <s>€19.99</s><strong><mark>First one is free!</mark></strong></p>
+                  <button class="btn btn-success btn-lg">Sign Up!</button> <!-- The class "btn-lg" is used for making the button bigger -->
+                  <!-- "text-muted" is a bootstrap class that will make our text a little bit lighter -->
+                  <p class="text-muted"><small>You must be over 18 to sign up toour service. Please drink responsibly.</small></p>
+                </section>
+            </div>  <!-- 1st "col-12" class ends here -->
+        </div>
         <!-- / .callout -->
         <hr>
 
         <!-- Quotes -->
         <section class="quotes">
-            <h2 class="text-uppercase">Quotes:</h2>
-            <blockquote class="blockquote">  <!-- changed <div> tag to <blockquote> tag to improve it both visually & semantically -->
-                <p>I've been introduced to more than 10 great international whiskeys I never knew about.</p>
-                <p>- Jane Doe</p>
-            </blockquote>
-            <blockquote class="blockquote">
-                <p>I haven't been sober for months!</p>
-                <p>- Joe Briggs</p>
-            </blockquote>
+            <div class="row">
+                <div class="col-12">  <!-- 2nd "col-12" class starts here. Used for mobile layout -->
+                  <h2 class="text-uppercase">Quotes:</h2>
+                </div> <!-- 2nd "col-12" class ends here -->
+            </div> 
+            <div class="row">
+                <div class="col-12 col-md-6"> <!-- 3rd "col-12" class starts here -->
+                    <!-- For the quotes section, we want our features to stack on top of each other on mobile screens so we use col-12 & side-by-side on other screen sizes so we use col-6 -->
+                    <blockquote class="blockquote">  <!-- changed <div> tag to <blockquote> tag to improve it both visually & semantically -->
+                        <p>I've been introduced to more than 10 great international whiskeys I never knew about.</p>
+                        <p>- Jane Doe</p>
+                    </blockquote>
+                <!-- <div>  3rd "col-12" class ends here --> 
+                </div>  <!-- 3rd "col-12" class ends here -->
+                <div class="col-12 col-md-6"> <!-- 4th "col-12" class starts here -->
+                    <blockquote class="blockquote">
+                        <p>I haven't been sober for months!</p>
+                        <p>- Joe Briggs</p>
+                    </blockquote>
+                </div>  <!-- 4th "col-12" class ends here -->
+            </div>  <!-- row class ends -->   
         </section>
         <!-- / .quotes -->
         <hr>
 
         <!-- Features -->
         <section class="features">
-            <h2 class="text-uppercase">Features:</h2>
-            <div class="features">
-                <h3>Feature 1</h3>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto modi nobis vitae repellat
-                   praesentium fuga voluptatem nesciunt veritatis sequi! Eaque.</p>
-                <!-- "btn" is our base class, "btn-sm" is for size & "btn-light" is for colour -->
-                <p><a class="btn btn-sm btn-light" href="">Read More</a></p>
-            </div>
-            <div class="features">
-                <h3>Feature 2</h3>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto modi nobis vitae repellat
-                   praesentium fuga voluptatem nesciunt veritatis sequi! Eaque.</p>
-                <p><a class="btn btn-sm btn-light" href="">Read More</a></p>
-            </div>
-            <div class="features">
-                <h3>Feature 3</h3>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto modi nobis vitae repellat
-                   praesentium fuga voluptatem nesciunt veritatis sequi! Eaque.</p>
-                <p><a class="btn btn-sm btn-light" href="">Read More</a></p>
-            </div>
+          <div class="row">
+              <div class="col-12 col-md-6">  <!-- 5th "col-12" class starts here -->
+                  <h2 class="text-uppercase">Features:</h2>
+              </div>  <!-- 5th "col-12" class ends here -->
+          </div>
+          <div class="row">
+              <!-- for the features only, we want to it to have some large screen size classes so we add "col-lg-4" to the first class below.
+               This will keep them side by side but make them occupy a third of the row. -->
+              <div class="col-12 col-md-6 col-lg-4"> <!-- 6th "col-12" class starts here -->  
+                  <div class="feature">
+                      <h3>Feature 1</h3>
+                          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto modi nobis vitae repellat
+                             praesentium fuga voluptatem nesciunt veritatis sequi! Eaque.</p>
+                          <!-- "btn" is our base class, "btn-sm" is for size & "btn-light" is for colour -->
+                          <p><a class="btn btn-sm btn-light" href="">Read More</a></p>
+                  </div>
+              </div>  <!-- 6th "col-12" class ends here -->
+              <div class="col-12 col-md-6 col-lg-4"> <!-- 7th "col-12" class starts here -->
+                  <div class="feature">
+                      <h3>Feature 2</h3>
+                      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto modi nobis vitae repellat
+                         praesentium fuga voluptatem nesciunt veritatis sequi! Eaque.</p>
+                      <p><a class="btn btn-sm btn-light" href="">Read More</a></p>
+                  </div>  
+              </div>  <!-- 7th "col-12" class ends here -->
+              <!-- We used "d-md-none". d stands for display. Our 3rd feature will not be displayed here cos we used 'd-md-none' so only  
+                2 features will be displayed side by side for medium screen sizes. For large screen sizes, we first use 'd-lg-block' 
+                to tell it to display again followed by 'col-lg-4' -->
+              <div class="col-12 d-md-none d-lg-block col-lg-4"> <!-- 8th "col-12" class starts here -->
+                  <div class="feature">
+                      <h3>Feature 3</h3>
+                      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto modi nobis vitae repellat
+                         praesentium fuga voluptatem nesciunt veritatis sequi! Eaque.</p>
+                      <p><a class="btn btn-sm btn-light" href="">Read More</a></p>
+                  </div>
+              </div>  <!-- 8th "col-12" class ends here -->
+          </div>
         </section>
+        <!-- / .features -->
 
         <!-- Monthly Favourites -->
         <section>
